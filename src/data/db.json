@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "text": "Complete React projects",
+      "id": "1",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "text": "Complete Typescript",
+      "completed": true
+    }
+  ]
+}
