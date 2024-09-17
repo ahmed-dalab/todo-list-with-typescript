@@ -1,3 +1,6 @@
+THIS PROJECT IS ONE OF THE PROJECTS I AM WORKING ON TO PRACTICE REACT WITH TYPESCRIPT
+
+PROJECT: 1
 <<<<<<< HEAD
 # React + TypeScript + Vite
 
@@ -53,3 +56,5 @@ export default tseslint.config({
 # todo-list-with-typescript
 todo-list with typescript
 >>>>>>> 398d42301d9f9bdb93bbc0606a7a163a68ce4f51
+>>>>>first you have to install json-server globally using npm i -g json-server and:
+>>>>>use this to run the json file: json-server -p 4000 -w ./src/data/db.json
