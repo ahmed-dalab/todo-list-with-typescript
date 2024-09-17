@@ -11,8 +11,8 @@ type TodoItemProps = {
    todo: Todo,
 }
 function TodoItem({ todo }: TodoItemProps) {
-   const [isEdit, setIsEdit]=useState(false)
-  const [newText, setNextText] = useState(todo.text)
+   const [isEdit, setIsEdit]=useState<boolean>(false)
+  const [newText, setNextText] = useState<string>(todo.text)
   const { dispatch } = useTodoContext()
 
   // delete todo
@@ -40,7 +40,7 @@ function TodoItem({ todo }: TodoItemProps) {
   const handleUpdate = async() => {
    
     try {
-      const updatedTodo = { ...todo };
+      const updatedTodo = { ...todo, text: newText };
     const res = await axios.put('http://localhost:4000/todos/' + todo.id, {
       text: newText
     })

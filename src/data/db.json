@@ -3,12 +3,17 @@
     {
       "text": "Complete React projects",
       "id": "1",
-      "completed": false
+      "completed": true
     },
     {
       "id": "3",
       "text": "Complete Typescript",
       "completed": true
+    },
+    {
+      "id": "1726568012959",
+      "text": "hello  World",
+      "completed": false
     }
   ]
 }

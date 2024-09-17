@@ -1,18 +1,11 @@
 import { createContext, useReducer } from "react"
 import { Todo } from "../components/TodoType"
-
+import { ActionType } from "./actionTypes"
 
 type TodoContextProps = {
     children: React.ReactNode
 }
-type ActionType = 
-    | { type: 'SET_TODOS'; payload: Todo[] }
-    | { type: 'ADD_TODO'; payload: Todo}
-    | { type: 'DELETE_TODO'; payload: string }
-    |  { type: 'UPDATE_TODO'; payload: Todo}
-    |  { type: 'COMPLETE_TODO'; payload: Todo}
-        
-
+ 
 // define state type 
 interface TodoState {
         todos: Todo[] | null
@@ -23,9 +16,7 @@ const initialState: TodoState = {
 } 
 
 // create context
-export const TodoContext = createContext<{
-    state: TodoState,
-    dispatch: React.Dispatch<ActionType>
+export const TodoContext = createContext<{ state: TodoState, dispatch: React.Dispatch<ActionType>
 } | undefined>(undefined)
 
 // reducer
@@ -42,7 +33,7 @@ const todoReducer = (state: TodoState, action: ActionType): TodoState => {
         case 'UPDATE_TODO': 
             return {
                 todos: state.todos?.map((todo) => 
-                 todo.id === action.payload.id ? {...todo, ...action.payload} : todo 
+                 todo.id === action.payload.id ? {...todo, text: action.payload.text} : todo 
                 ) || null
             }
         case 'DELETE_TODO':
